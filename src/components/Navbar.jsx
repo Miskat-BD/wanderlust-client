@@ -9,12 +9,12 @@ const Navbar = () => {
     const { data: session } = authClient.useSession()
     const user = session?.user;
     // console.log(user);
-    const handleSignOut = async()=>{
+    const handleSignOut = async () => {
         await authClient.signOut();
     }
     return (
-        <div>
-            <nav className='flex justify-between items-center p-5'>
+        <div className='p-5'>
+            <nav className='flex justify-between items-center  max-w-7xl mx-auto'>
                 <ul className='flex justify-between items-center gap-2'>
                     <li><Link href={'/'}>Home</Link></li>
                     <li><Link href={'/destinations'}>Destinations</Link></li>
